@@ -1,3 +1,5 @@
+#Large Language Models for Lossless Image Compression: Next-Pixel Prediction in Language Space is All You Need
+
 1. Install the packages using requirements file
 
 2. dataset: DIV2K validation set:
@@ -48,5 +50,6 @@
             bf16  # bf16,
             fp8
         accelerate configuration saved at /home/variantconst/.cache/huggingface/accelerate/default_config.yaml
+
 
 4. run accelerate launch test_Lora_finetuning_llama.py
