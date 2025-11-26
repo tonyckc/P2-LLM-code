@@ -1,15 +1,25 @@
-#Large Language Models for Lossless Image Compression: Next-Pixel Prediction in Language Space is All You Need
 
+# Large Language Models for Lossless Image Compression: Next-Pixel Prediction in Language Space is All You Need
+
+
+This is the official PyTorch implementation of our paper:
+
+[Large Language Models for Lossless Image Compression: Next-Pixel Prediction in Language Space is All You Need](https://openreview.net/pdf/e583c137b82a12d3f190f7cfbf7bd07f69b6c559.pdf). 
+
+If you have any problems, please email me (ck.ee@my.cityu.edu.hk).
+
+
+# Usage
 1. Install the packages using requirements file
 
 2. dataset: DIV2K validation set:
-   finetuning training set : /root/autodl-tmp/benchmark/DIV2K-test/large_data_train_p16_half_full.json
-   finetuning validation set: /root/autodl-tmp/benchmark/DIV2K-test/large_data_valid_p16_half_full.json
+   finetuning training set : ./benchmark/DIV2K-test/large_data_train_p16_half_full.json
+   finetuning validation set: ./benchmark/DIV2K-test/large_data_valid_p16_half_full.json
 
-   To download dataset, please login my autoDL account (user:18080556093 password: ckc2015ji) and the used machine (A800 / 017机03dd44a781-c9bf73c8)
+  
 
-3. Pretrained model: Llama model 3.1-8B at '/root/autodl-tmp/cache/huggingface/hub/' (corresponding parser.add_argument("--cache_dir", default='/root/autodl-tmp/cache/huggingface/hub/'))
-   To download model, you can also login my autoDL account
+3. Pretrained model: Llama model 3.1-8B at './cache/huggingface/hub/' (corresponding parser.add_argument("--cache_dir", default='./cache/huggingface/hub/'))
+
 
 
 3. You should set the DeepSpeed for acceleration, at Shell window for setting:
@@ -53,3 +63,4 @@
 
 
 4. run accelerate launch test_Lora_finetuning_llama.py
+
