@@ -1,0 +1,24 @@
+name: imagenet
+
+# training #500000 #5000 #250000
+epoch: 1
+warmup_ratio: 0.1
+eval_steps: 2500
+batch_size: 8
+gradient_accumulation_steps: 1
+learning_rate: 0.000006
+warmup_steps: 1000
+training_size: 500
+validate_size: 100
+num_proc: 1
+# architecture
+embed_dim: 512
+num_heads: 8
+num_layers: 24
+num_pixels: 32
+num_vocab: 512
+
+classify: False
+
+gpus: 1
+precision: 16
