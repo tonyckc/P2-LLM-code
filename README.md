@@ -1,25 +1,17 @@
 
-# Large Language Models for Lossless Image Compression: Next-Pixel Prediction in Language Space is All You Need
+# Beyond Confidence: Adaptive and Coherent Decoding for Diffusion Language Models
 
 
-This is the official PyTorch implementation of our paper:
+This is a preliminary PyTorch implementation of our paper:
 
-[Large Language Models for Lossless Image Compression: Next-Pixel Prediction in Language Space is All You Need](https://openreview.net/pdf/e583c137b82a12d3f190f7cfbf7bd07f69b6c559.pdf). 
+[Beyond Confidence: Adaptive and Coherent Decoding for Diffusion Language Models](https://arxiv.org/abs/2512.02044). 
 
 If you have any problems, please email me (ck.ee@my.cityu.edu.hk).
 
 
 # Usage
-1. Install the packages using requirements file
 
-2. dataset: DIV2K validation set:
-   finetuning training set : ./benchmark/DIV2K-test/large_data_train_p16_half_full.json
-   finetuning validation set: ./benchmark/DIV2K-test/large_data_valid_p16_half_full.json
+Run inference_optimization_release.py and choose different decoding types, i.e., "ours" (CCD) or "dream" （entropy）)
 
-3. Pretrained model: Llama model 3.1-8B at './cache/huggingface/hub/' (corresponding parser.add_argument("--cache_dir", default='./cache/huggingface/hub/'))
-
-4. You should set the DeepSpeed for acceleration
-
-5. run accelerate launch test_Lora_finetuning_llama.py
 
 
